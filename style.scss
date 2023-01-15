@@ -1,0 +1,132 @@
+.wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.custom-content-header {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.cust-title {
+  position: relative;
+  color: #282828;
+  font-family: "PT Serif", serif;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  max-width: max-content;
+  justify-content: space-between;
+  text-align: center;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 2px;
+    background-color: #a18157;
+    // position: absolute;
+    // left: 0;
+    margin-right: 20px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 2px;
+    background-color: #a18157;
+    // position: absolute;
+    // right: 0;
+    margin-left: 20px;
+  }
+}
+
+.custom-menu {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 32px;
+
+    li {
+
+    }
+    img {
+      border: 2px solid;
+      display: block;
+      border-color: #a18157;
+    }
+    a {
+      display: block;
+      transition:  all 0.5s;
+
+      &:hover {
+        transform: translateY(-30px);
+        box-shadow: 12px 12px 2px 1px rgba(#a18157, .2);
+      }
+    }
+  }
+
+  &__list--three {
+
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  
+  .tabs {
+    border: 1px solid #e0e0e0;
+  }
+
+  .tabs__nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background: #fafafa;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .tabs__btn {
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: #a18157;
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .tabs__btn_active {
+    background: #e0e0e0;
+    cursor: default;
+  }
+
+  .tabs__btn:not(.tabs__btn_active):hover,
+  .tabs__btn:not(.tabs__btn_active):focus {
+    background-color: #eee;
+  }
+
+  .tabs__content {
+    padding: 64px 32px;
+  }
+
+  .tabs__pane {
+    display: none;
+  }
+
+  .tabs__pane_show {
+    display: block;
+  }
+}
